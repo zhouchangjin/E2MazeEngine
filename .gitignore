@@ -1,0 +1,7 @@
+/fonts/*.ttf
+/Debug/
+/obj/
+/.settings/
+/bin/
+*.depend
+*.layout

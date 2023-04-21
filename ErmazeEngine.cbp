@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ErmazeEngine" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ErmazeEngine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DGE_DEBUG" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ErmazeEngine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="C:/work/LibraryCB/mingw/SDL2-2.0.12/x86_64-w64-mingw32/include" />
+			<Add directory="C:/work/LibraryCB/mingw/SDL2_image-2.0.5/x86_64-w64-mingw32/include/SDL2" />
+			<Add directory="C:/work/LibraryCB/mingw/SDL2_ttf-2.0.15/x86_64-w64-mingw32/include/SDL2" />
+			<Add directory="libs" />
+			<Add directory="C:/work/LibraryCB/mingw/SDL2_gfx-1.0.4/include/SDL2" />
+		</Compiler>
+		<Linker>
+			<Add option="-lSDL2_image" />
+			<Add option="-lSDL2_ttf" />
+			<Add option="-lSDL2_gfx" />
+			<Add library="mingw32" />
+			<Add library="SDL2main" />
+			<Add library="SDL2.dll" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add directory="C:/work/LibraryCB/mingw/SDL2-2.0.12/x86_64-w64-mingw32/lib" />
+			<Add directory="C:/work/LibraryCB/mingw/SDL2_image-2.0.5/x86_64-w64-mingw32/lib" />
+			<Add directory="C:/work/LibraryCB/mingw/SDL2_ttf-2.0.15/x86_64-w64-mingw32/lib" />
+			<Add directory="C:/work/LibraryCB/mingw/SDL2_gfx-1.0.4/lib" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="XCOPY $(#sdl2)\bin\*.dll $(TARGET_OUTPUT_DIR) /D /Y" />
+		</ExtraCommands>
+		<Unit filename="include/C2DGameScene.h" />
+		<Unit filename="include/CActionEvent.h" />
+		<Unit filename="include/CAdvDialog.h" />
+		<Unit filename="include/CAnimationItem.h" />
+		<Unit filename="include/CAnimationManager.h" />
+		<Unit filename="include/CBaseParticleEmitter.h" />
+		<Unit filename="include/CBattleEvent.h" />
+		<Unit filename="include/CCamera2D.h" />
+		<Unit filename="include/CChoiceDialog.h" />
+		<Unit filename="include/CDatabaseLoader.h" />
+		<Unit filename="include/CDomWindow.h" />
+		<Unit filename="include/CEquipMenu.h" />
+		<Unit filename="include/CEventManager.h" />
+		<Unit filename="include/CFailSceneState.h" />
+		<Unit filename="include/CGame.h" />
+		<Unit filename="include/CGameContext.h" />
+		<Unit filename="include/CGameData.h" />
+		<Unit filename="include/CGameDataChunkFactory.h" />
+		<Unit filename="include/CGameDatabase.h" />
+		<Unit filename="include/CGameDialog.h" />
+		<Unit filename="include/CGameEngine.h" />
+		<Unit filename="include/CGameEvent.h" />
+		<Unit filename="include/CGameObject.h" />
+		<Unit filename="include/CGameScene.h" />
+		<Unit filename="include/CGameSettings.h" />
+		<Unit filename="include/CGameState.h" />
+		<Unit filename="include/CGameUISystem.h" />
+		<Unit filename="include/CGameWindow.h" />
+		<Unit filename="include/CGuideDog.h" />
+		<Unit filename="include/CHandler.h" />
+		<Unit filename="include/CImageDB.h" />
+		<Unit filename="include/CInputEvent.h" />
+		<Unit filename="include/CLayer.h" />
+		<Unit filename="include/CMenuInputEvent.h" />
+		<Unit filename="include/CMenuState.h" />
+		<Unit filename="include/CNPCGameObject.h" />
+		<Unit filename="include/CObjectData.h" />
+		<Unit filename="include/COrthoTileState.h" />
+		<Unit filename="include/CPCSpriteGameObject.h" />
+		<Unit filename="include/CParticle.h" />
+		<Unit filename="include/CParticlePool.h" />
+		<Unit filename="include/CParticleSystem.h" />
+		<Unit filename="include/CProjectile.h" />
+		<Unit filename="include/CProjectileEmitter.h" />
+		<Unit filename="include/CRPGCommand.h" />
+		<Unit filename="include/CRPGEnemyData.h" />
+		<Unit filename="include/CRPGGameData.h" />
+		<Unit filename="include/CRPGPlayerData.h" />
+		<Unit filename="include/CRandomGenerator.h" />
+		<Unit filename="include/CSDLRenderService.h" />
+		<Unit filename="include/CSceneData.h" />
+		<Unit filename="include/CSdlGameContext.h" />
+		<Unit filename="include/CServiceLocator.h" />
+		<Unit filename="include/CSideTurnBaseBattleState.h" />
+		<Unit filename="include/CSimpleGameDB.h" />
+		<Unit filename="include/CSprite.h" />
+		<Unit filename="include/CSpriteDB.h" />
+		<Unit filename="include/CSpriteGameObject.h" />
+		<Unit filename="include/CSpriteSheet.h" />
+		<Unit filename="include/CTexture.h" />
+		<Unit filename="include/CTileLayer.h" />
+		<Unit filename="include/CTiledTexture.h" />
+		<Unit filename="include/CTransferArea.h" />
+		<Unit filename="include/CUIActionManager.h" />
+		<Unit filename="include/CUIManager.h" />
+		<Unit filename="include/EngineHelper.h" />
+		<Unit filename="include/File_Util.h" />
+		<Unit filename="include/GameFileLoader.h" />
+		<Unit filename="include/IDefaultActionEventProcess.h" />
+		<Unit filename="include/IDefaultEventProcess.h" />
+		<Unit filename="include/IDefaultMenuEventProcess.h" />
+		<Unit filename="include/IEmitter.h" />
+		<Unit filename="include/IMenuProcess.h" />
+		<Unit filename="include/ISpriteDB.h" />
+		<Unit filename="include/ITextureDB.h" />
+		<Unit filename="include/Render_Util.h" />
+		<Unit filename="include/SDL_Utilities.h" />
+		<Unit filename="include/Str_Utilities.h" />
+		<Unit filename="include/XML_Utilities.h" />
+		<Unit filename="include/common_struct.h" />
+		<Unit filename="libs/pugixml/pugiconfig.hpp" />
+		<Unit filename="libs/pugixml/pugixml.cpp" />
+		<Unit filename="libs/pugixml/pugixml.hpp" />
+		<Unit filename="src/C2DGameScene.cpp" />
+		<Unit filename="src/CActionEvent.cpp" />
+		<Unit filename="src/CAdvDialog.cpp" />
+		<Unit filename="src/CAnimationItem.cpp" />
+		<Unit filename="src/CAnimationManager.cpp" />
+		<Unit filename="src/CBaseParticleEmitter.cpp" />
+		<Unit filename="src/CBattleEvent.cpp" />
+		<Unit filename="src/CCamera2D.cpp" />
+		<Unit filename="src/CChoiceDialog.cpp" />
+		<Unit filename="src/CDatabaseLoader.cpp" />
+		<Unit filename="src/CDomWindow.cpp" />
+		<Unit filename="src/CEquipMenu.cpp" />
+		<Unit filename="src/CFailSceneState.cpp" />
+		<Unit filename="src/CGame.cpp" />
+		<Unit filename="src/CGameContext.cpp" />
+		<Unit filename="src/CGameData.cpp" />
+		<Unit filename="src/CGameDataChunkFactory.cpp" />
+		<Unit filename="src/CGameDatabase.cpp" />
+		<Unit filename="src/CGameDialog.cpp" />
+		<Unit filename="src/CGameEngine.cpp" />
+		<Unit filename="src/CGameEvent.cpp" />
+		<Unit filename="src/CGameObject.cpp" />
+		<Unit filename="src/CGameScene.cpp" />
+		<Unit filename="src/CGameSettings.cpp" />
+		<Unit filename="src/CGameState.cpp" />
+		<Unit filename="src/CGameUISystem.cpp" />
+		<Unit filename="src/CGameWindow.cpp" />
+		<Unit filename="src/CHandler.cpp" />
+		<Unit filename="src/CImageDB.cpp" />
+		<Unit filename="src/CInputEvent.cpp" />
+		<Unit filename="src/CLayer.cpp" />
+		<Unit filename="src/CMenuInputEvent.cpp" />
+		<Unit filename="src/CMenuState.cpp" />
+		<Unit filename="src/CNPCGameObject.cpp" />
+		<Unit filename="src/CObjectData.cpp" />
+		<Unit filename="src/COrthoTileState.cpp" />
+		<Unit filename="src/CPCSpriteGameObject.cpp" />
+		<Unit filename="src/CParticle.cpp" />
+		<Unit filename="src/CParticlePool.cpp" />
+		<Unit filename="src/CParticleSystem.cpp" />
+		<Unit filename="src/CProjectile.cpp" />
+		<Unit filename="src/CProjectileEmitter.cpp" />
+		<Unit filename="src/CRPGCommand.cpp" />
+		<Unit filename="src/CRPGEnemyData.cpp" />
+		<Unit filename="src/CRPGGameData.cpp" />
+		<Unit filename="src/CRPGPlayerData.cpp" />
+		<Unit filename="src/CRandomGenerator.cpp" />
+		<Unit filename="src/CSDLRenderService.cpp" />
+		<Unit filename="src/CSceneData.cpp" />
+		<Unit filename="src/CSdlGameContext.cpp" />
+		<Unit filename="src/CServiceLocator.cpp" />
+		<Unit filename="src/CSideTurnBaseBattleState.cpp" />
+		<Unit filename="src/CSimpleGameDB.cpp" />
+		<Unit filename="src/CSprite.cpp" />
+		<Unit filename="src/CSpriteDB.cpp" />
+		<Unit filename="src/CSpriteGameObject.cpp" />
+		<Unit filename="src/CSpriteSheet.cpp" />
+		<Unit filename="src/CTexture.cpp" />
+		<Unit filename="src/CTileLayer.cpp" />
+		<Unit filename="src/CTiledTexture.cpp" />
+		<Unit filename="src/CTransferArea.cpp" />
+		<Unit filename="src/CUIActionManager.cpp" />
+		<Unit filename="src/CUIManager.cpp" />
+		<Unit filename="src/EngineHelper.cpp" />
+		<Unit filename="src/File_Util.cpp" />
+		<Unit filename="src/GameFileLoader.cpp" />
+		<Unit filename="src/IDefaultActionEventProcess.cpp" />
+		<Unit filename="src/IDefaultEventProcess.cpp" />
+		<Unit filename="src/IDefaultMenuEventProcess.cpp" />
+		<Unit filename="src/IEmitter.cpp" />
+		<Unit filename="src/IMenuProcess.cpp" />
+		<Unit filename="src/ISpriteDB.cpp" />
+		<Unit filename="src/ITextureDB.cpp" />
+		<Unit filename="src/Main.cpp" />
+		<Unit filename="src/Render_Util.cpp" />
+		<Unit filename="src/SDL_Utilities.cpp" />
+		<Unit filename="src/Str_Utilities.cpp" />
+		<Unit filename="src/XML_Utilities.cpp" />
+		<Unit filename="src/common_struct.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
