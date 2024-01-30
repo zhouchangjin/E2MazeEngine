@@ -1,0 +1,41 @@
+cmake_minimum_required(VERSION 3.27)
+project(E2MazeEngine)
+
+find_package(SDL2 REQUIRED)
+find_package(SDL2_image REQUIRED)
+find_package(SDL2_ttf REQUIRED)
+
+message(STATUS "sdl folder ${SDL2_INCLUDE_DIRS}")
+if(SDL2_FOUND)
+message ("SDL2 found"+${SDL2_INCLUDE_DIRS})
+else()
+    message (FATAL_ERROR "Cannot find SDL2")
+endif()
+
+include_directories(${SDL2_INCLUDE_DIRS}  ${SDL2_IMAGE_INCLUDE_DIRS}  ${SDL2_TTF_INCLUDE_DIRS} ${SDL2_GFX_INCLUDE_DIRS}  libs/pugixml)
+add_executable(Main)  
+target_include_directories(Main PUBLIC include)
+aux_source_directory(src sources)
+aux_source_directory(. sources)
+aux_source_directory(libs/pugixml sources)
+target_sources(Main PUBLIC ${sources})
+
+if(TARGET SDL2::SDL2main)
+    # It has an implicit dependency on SDL2 functions, so it MUST be added before SDL2::SDL2 (or SDL2::SDL2-static)
+    target_link_libraries(Main PRIVATE SDL2::SDL2main)
+endif()
+
+target_link_libraries(Main PUBLIC SDL2::SDL2 SDL2_image SDL2_ttf SDL2_gfx)
+
+#file(COPY ./game.xml DESTINATION ./ FOLLOW_SYMLINK_CHAIN)
+
+install(TARGETS Main DESTINATION  ${CMAKE_SOURCE_DIR}/out/Release)
+install(FILES game.xml DESTINATION ${CMAKE_SOURCE_DIR}/out/Release)
+install(DIRECTORY ui DESTINATION ${CMAKE_SOURCE_DIR}/out/Release)
+install(DIRECTORY data DESTINATION ${CMAKE_SOURCE_DIR}/out/Release)
+install(DIRECTORY res DESTINATION ${CMAKE_SOURCE_DIR}/out/Release)
+install(DIRECTORY scenes DESTINATION ${CMAKE_SOURCE_DIR}/out/Release)
+install(DIRECTORY sprites DESTINATION ${CMAKE_SOURCE_DIR}/out/Release)
+install(DIRECTORY fonts DESTINATION ${CMAKE_SOURCE_DIR}/out/Release)
+install(DIRECTORY animation DESTINATION ${CMAKE_SOURCE_DIR}/out/Release)
+install(DIRECTORY dev DESTINATION ${CMAKE_SOURCE_DIR}/out/Release)
